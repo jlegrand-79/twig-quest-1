@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Produits</title>
+    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+
+<table border ="1">
+<thead>
+<tr>
+<th>Instruments</th>
+</tr>
+</thead>
+<tbody>
+{% for key, value in products %}
+<tr>
+<td>{{ value }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<h2>Les instruments</h2>
+<ul>
+
+
+{% for key, value in products %}
+<li>{{ value }}
+</li>
+{% endfor %}
+</ul>
+
+<pre>
+    {{ dump(products) }}
+</pre>
+
+</body>
+</html>
